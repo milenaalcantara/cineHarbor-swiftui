@@ -53,6 +53,8 @@ struct TrendingView: View {
                                 
                                 Button {
                                     viewModel.toggleFavorite(item)
+                                    
+                                    // Envio do evento, com parâmetros
                                     let dict = [
                                         "streamTitle": item.title,
                                         "isFavorite": "\(viewModel.isFavorite(item))"

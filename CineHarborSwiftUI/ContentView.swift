@@ -28,6 +28,7 @@ struct ContentView: View {
                     Label("Favoritos", systemImage: "heart.fill")
                 }
                 .onAppear {
+                    // Envio do evento para o Mixpanel
                     Mixpanel.mainInstance().track(event: "FavoritesView")
                 }
         }
